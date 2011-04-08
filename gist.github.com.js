@@ -7,7 +7,7 @@ function imageTagForString(str) {
          "' src='https://github.com/flogic/emogc/raw/master/images/" + label + ".png' />";
 }
 
-$('*').replaceText(/:([a-z]\w*):/gi, imageTagForString);
+$('*').replaceText(/:([a-z]\w*):(?!:)/gi, imageTagForString);
 
 
 $("div.actions").prepend("<a href='#' id='soft-wrap'>wrap it</a>")
