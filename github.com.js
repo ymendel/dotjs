@@ -7,7 +7,9 @@ function imageTagForString(str) {
          "' src='https://github.com/flogic/emogc/raw/master/images/" + label + ".png' />";
 }
 
-$('*').replaceText(/:([a-z]\w*):(?!:)/gi, imageTagForString);
+if (!window.location.href.match('/raw/')) {
+    $('*').replaceText(/:([a-z]\w*):(?!:)/gi, imageTagForString);
+}
 
 
 $("div.file ul.actions").prepend("<li><a href='https://gist.github.com/gists' id='gist-url'>gist it</a></li>")
