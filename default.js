@@ -5,4 +5,4 @@ function string_linkify(str) {
     return "<a href='" + str + "'>" + str + "</a>";
 }
 
-$('*').replaceText(/http(s)?:\/\/\S+/g, string_linkify);
+$("body *").not("noscript").replaceText(/http(s)?:\/\/\S+/g, string_linkify);
