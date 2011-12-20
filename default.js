@@ -4,6 +4,6 @@
 function string_linkify(str) {
     return "<a href='" + str + "'>" + str + "</a>";
 }
-$("body *").not("noscript, script").replaceText(/http(s)?:\/\/\S+/g, string_linkify);
+$("body *").not("noscript, script, a").replaceText(/http(s)?:\/\/\S+/g, string_linkify);
 
 $("*[onselectstart]").removeAttr("onselectstart");
