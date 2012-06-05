@@ -1,0 +1,1 @@
+$('div#adaptvDiv').hide();
